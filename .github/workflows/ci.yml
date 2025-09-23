@@ -7,11 +7,18 @@ on:
     branches: [ main, master ]
 
 jobs:
-  lint:
+    lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Show repo info
-        run: |
-          echo "Repository: ${{ github.repository }}"
-          echo "Ref: ${{ github.ref }}"
+            - name: Run Super Linter
+                uses: super-linter/super-linter@v7.1.0
+                env:
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    DEFAULT_BRANCH: main
+                    VALIDATE_ALL_CODEBASE: true
+                    JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.yml
+                    MARKDOWN_CONFIG_FILE: .markdownlint.yaml
+                    YAML_CONFIG_FILE: .yamllint.yml
+                    GOLANGCI_LINT_CONFIG_FILE: .golangci.yml
+                    PYTHON_FLAKE8_CONFIG_FILE: .flake8
