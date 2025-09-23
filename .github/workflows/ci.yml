@@ -1,21 +1,21 @@
 name: CI
 
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+    push:
+        branches: [ main, master ]
+    pull_request:
+        branches: [ main, master ]
 
 jobs:
     lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
             - name: Run Super Linter
                 uses: super-linter/super-linter@v7.1.0
                 env:
                     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                    DEFAULT_BRANCH: main
+                    DEFAULT_BRANCH: master
                     VALIDATE_ALL_CODEBASE: true
                     JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.yml
                     MARKDOWN_CONFIG_FILE: .markdownlint.yaml
