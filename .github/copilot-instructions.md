@@ -1,20 +1,15 @@
 <!-- file: .github/copilot-instructions.md -->
-<!-- version: 1.0.0 -->
+<!-- version: 1.1.0 -->
 <!-- guid: 4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a -->
+<!-- last-edited: 2026-06-13 -->
 
-# Copilot/AI Agent Coding Instructions System
+# project-template — Additional Context
 
-This repository uses a centralized, modular system for Copilot/AI agent coding,
-documentation, and workflow instructions.
+Org-wide coding standards (file headers, language rules, commit format) are at
+**https://github.com/falkcarp/.github** and apply automatically to this repo.
 
-## System Overview
+For full project context: **CLAUDE.md** at the repo root.
 
-- General rules: `.github/instructions/general-coding.instructions.md`
-- Language/task-specific: place additional files in `.github/instructions/`
-- Prompts: `.github/prompts/` (optional)
+## Project overview
 
-## For Contributors
-
-- Edit or add rules in `.github/instructions/`.
-- Prefer VS Code tasks when available.
-- Keep required headers (file path, version, guid) in all instruction files.
+Template repository for new projects — standardized structure. Language: YAML.
